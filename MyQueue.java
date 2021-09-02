@@ -19,6 +19,18 @@ public class MyQueue {
 		myLinkedList.append(value);
 	}
 	
+	// @method to dequeue an element using linked list object
+	public void dequeue() {
+		myLinkedList.remove();
+	}
+	
+	/*@method to print top element of queue
+	 * @return int value to the calling function
+	 */
+	public int printPeak() {
+		return myLinkedList.peak();
+	}
+	
 	// @method to print elements of the queue
 	public void printQueue() {
 		myLinkedList.printNodes();

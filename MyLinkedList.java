@@ -70,10 +70,10 @@ public class MyLinkedList<k> {
 	 */
 	public void remove() {
 		if (this.tail == null) {
-			System.out.println("Stack is empty!");
+			System.out.println("Queue is empty!");
 		}
 		if (this.head == null) {
-			System.out.println("Stack is empty!");
+			System.out.println("Queue is empty!");
 		} else {
 			INode<k> tempNode = this.head.getNext();
 			this.head = tempNode;
@@ -90,7 +90,7 @@ public class MyLinkedList<k> {
 	// @method to print the nodes of linked list
 	public void printNodes() {
 		if (this.head == null) {
-			System.out.println("Stack is empty!!");
+			System.out.println("Queue is empty!!");
 		} else {
 			System.out.println("Elements are: " + head);
 		}
