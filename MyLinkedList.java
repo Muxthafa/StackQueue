@@ -28,9 +28,59 @@ public class MyLinkedList<k> {
 			this.head.setNext(tempNode);
 		}
 	}
+
+/* popping and printing elements in one function
+	public void remove() {
+		while(this.head != null) {
+		if(this.tail == null) {
+			System.out.println("Stack is empty!");
+		}
+		if(this.head == null) {
+			System.out.println("Stack is empty!");
+		}
+		else {
+			
+			INode<k> tempNode = this.head.getNext();
+			this.head = tempNode;
+			System.out.println("Elements in stack after popping: ");
+			printNodes();
+			System.out.println("Top of the stack: "+peak());
+		}}
+	}
+*/
+	/*@method to perform popping of an element from stack
+	 * if head or tail points to null then prints stack is empty
+	 * else head points to second element in the linked list
+	 * @return nothing
+	 */
+	public void remove() {
+		if(this.tail == null) {
+			System.out.println("Stack is empty!");
+		}
+		if(this.head == null) {
+			System.out.println("Stack is empty!");
+		}
+		else {
+			
+			INode<k> tempNode = this.head.getNext();
+			this.head = tempNode;
+		}
+	}
+	
+	/*@method to call current key value pointed by head 
+	 * @return key as Integer object 
+	 */
+	public Integer peak() {
+		return (Integer) this.head.getKey();
+	}
 	
 	//@method to print the nodes of linked list
 		public void printNodes() {
-			System.out.println("Elements in stack: "+head);
+			if(this.head == null) {
+				System.out.println("Stack is empty!!");
+			}
+			else {
+				System.out.println("Elements are: "+head);
+			}
 		}
 }

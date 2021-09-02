@@ -21,6 +21,20 @@ public class MyStack {
 		myLinkedList.add(value);
 	}
 	
+	//@method to pop an element using linked list object
+	public void pop()
+	{
+		myLinkedList.remove();
+	}
+	
+	/*@method to print top element of stack
+	 * @return int value to the calling function
+	 */
+	public int printPeak()
+	{
+		return myLinkedList.peak();
+	}
+	
 	//@method to print elements of the stack
 	public void printStack()
 	{

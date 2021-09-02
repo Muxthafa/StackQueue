@@ -17,7 +17,20 @@ public class MyStackTest {
 		myStack.push(mySecondNode);
 		myStack.push(myThirdNode);
 		
-		myStack.printStack();				//function call to print the elements in the stack
+		System.out.println("Elements in stack before popping: ");
+		myStack.printStack();
+		
+		System.out.println("Top of the stack: "+myStack.printPeak());
+		
+		//pop method call to pop top element of the stack
+		myStack.pop();
+		myStack.printStack();
+		System.out.println("Top of the stack after popping: "+myStack.printPeak());
+		myStack.pop();
+		myStack.printStack();
+		System.out.println("Top of the stack after popping: "+myStack.printPeak());
+		myStack.pop();
+		myStack.printStack();	//function call to print the elements in the stack			
 	}
 
 }
