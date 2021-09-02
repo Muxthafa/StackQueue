@@ -16,16 +16,31 @@ public class MyLinkedList<k> {
 	 * @return nothing
 	 */
 	public void add(INode<k> newNode) {
-		if(this.tail == null) {
+		if (this.tail == null) {
 			this.tail = newNode;
 		}
-		if(this.head == null) {
+		if (this.head == null) {
 			this.head = newNode;
-		}
-		else {
+		} else {
 			INode<k> tempNode = this.head;
 			this.head = newNode;
 			this.head.setNext(tempNode);
+		}
+	}
+	
+	/**
+	 * @method appends an element to the linked list
+	 * @param newNode contains new node value
+	 */
+	public void append(INode<k> newNode) {
+		if (this.head == null) {
+			this.head = newNode;
+		}
+		if (this.tail == null) {
+			this.tail = newNode;
+		} else {
+			this.tail.setNext(newNode);
+			this.tail = newNode;
 		}
 	}
 
@@ -54,14 +69,12 @@ public class MyLinkedList<k> {
 	 * @return nothing
 	 */
 	public void remove() {
-		if(this.tail == null) {
+		if (this.tail == null) {
 			System.out.println("Stack is empty!");
 		}
-		if(this.head == null) {
+		if (this.head == null) {
 			System.out.println("Stack is empty!");
-		}
-		else {
-			
+		} else {
 			INode<k> tempNode = this.head.getNext();
 			this.head = tempNode;
 		}
@@ -74,13 +87,12 @@ public class MyLinkedList<k> {
 		return (Integer) this.head.getKey();
 	}
 	
-	//@method to print the nodes of linked list
-		public void printNodes() {
-			if(this.head == null) {
-				System.out.println("Stack is empty!!");
-			}
-			else {
-				System.out.println("Elements are: "+head);
-			}
+	// @method to print the nodes of linked list
+	public void printNodes() {
+		if (this.head == null) {
+			System.out.println("Stack is empty!!");
+		} else {
+			System.out.println("Elements are: " + head);
 		}
+	}
 }
